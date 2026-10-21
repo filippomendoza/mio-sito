@@ -2,58 +2,81 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Il mio primo sito - Filippo</title>
   <style>
+    /* Stile semplice per principianti */
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
+      background-color: #f0f4f8;
       color: #333;
-      text-align: center;
       margin: 20px;
     }
 
     h1 {
-      color: #2c3e50;
+      color: #1a5276;
+      text-align: center;
     }
 
     .sotto {
-      color: #666;
+      text-align: center;
+      color: #555;
       font-style: italic;
     }
 
     .scheda {
-      background-color: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      max-width: 450px;
-      margin: 20px auto;
+      background-color: white;
+      border: 2px solid #3498db;
+      border-radius: 8px;
       padding: 20px;
-      text-align: left;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 550px;
+      margin: 20px auto;
     }
 
-    .scheda h2 {
+    h2 {
       color: #2980b9;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #ccc;
       padding-bottom: 5px;
     }
 
-    ul {
-      line-height: 1.6;
+    ul, ol {
+      line-height: 1.8;
     }
 
     img {
+      display: block;
+      margin: 15px auto;
       max-width: 100%;
       height: auto;
-      border-radius: 8px;
-      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+
+    /* Tabella semplice */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid #bbb;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eaf2f8;
     }
 
     .piede {
+      text-align: center;
       margin-top: 30px;
-      font-size: 0.85em;
-      color: #888;
+      font-size: 14px;
+      color: #777;
     }
   </style>
 </head>
@@ -63,9 +86,11 @@
   <p class="sotto">Questo è il mio primo sito web.</p>
 
   <div class="scheda">
+    <!-- CHI SONO -->
     <h2>Chi sono</h2>
-    <p>Studio informatica e mi piace creare cose nuove.</p>
+    <p>Studio informatica e mi piace creare cose nuove con il computer.</p>
 
+    <!-- LE MIE PASSIONI -->
     <h2>Le mie passioni</h2>
     <ul>
       <li>Calcio</li>
@@ -73,11 +98,41 @@
       <li>Musica</li>
     </ul>
 
-    <!-- Foto presente nella cartella img -->
+    <!-- FOTO DAL SERVER/CARTELLA -->
     <img src="img/passione.jpg" alt="Le mie passioni" width="300">
 
+    <!-- COSE CHE STO IMPARANDO -->
+    <h2>Cosa sto imparando</h2>
+    <ol>
+      <li>Creare pagine web in HTML</li>
+      <li>Usare il CSS per lo stile</li>
+      <li>Caricare i file su GitHub</li>
+    </ol>
+
+    <!-- TABELLA MATERIE -->
+    <h2>Le mie materie preferite</h2>
+    <table>
+      <tr>
+        <th>Materia</th>
+        <th>Cosa facciamo</th>
+      </tr>
+      <tr>
+        <td>Informatica</td>
+        <td>Siti web e programmazione</td>
+      </tr>
+      <tr>
+        <td>Educazione Fisica</td>
+        <td>Sport e giochi di squadra</td>
+      </tr>
+    </table>
+
+    <!-- IL MIO SOGNO -->
     <h2>Il mio sogno</h2>
-    <p>Lavorare con i computer.</p>
+    <p>Lavorare con i computer e diventare uno sviluppatore.</p>
+
+    <!-- CONTATTI -->
+    <h2>Contatti</h2>
+    <p>Email: filippo@esempio.it</p>
   </div>
 
   <p class="piede">Sito creato da me - 2026</p>
