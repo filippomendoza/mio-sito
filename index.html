@@ -4,168 +4,122 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Il mio primo sito - Filippo</title>
-  <style>
-    /* RESET E STILE DI BASE */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      /* SFONDO CON SFUMATURA MODERNA */
-      background: linear-gradient(135deg, #e0f2fe 0%, #e0e7ff 100%);
-      min-height: 100vh;
-      color: #1e293b;
-      padding: 40px 15px;
-      line-height: 1.6;
-    }
+  <!-- INTESTAZIONE -->
+  <header>
+    <h1>Ciao, sono Filippo</h1>
+    <p class="sotto">Questo è il mio primo sito web.</p>
+  </header>
 
-    /* INTESTAZIONE */
-    header {
-      text-align: center;
-      margin-bottom: 25px;
-    }
+  <!-- SCHEDA PRINCIPALE -->
+  <main class="scheda">
 
-    h1 {
-      color: #1e40af; /* BLU SCURO INTENSO */
-      font-size: 2.4rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-      text-shadow: 0 2px 4px rgba(30, 64, 175, 0.1);
-    }
+    <!-- CHI SONO -->
+    <section>
+      <h2>Chi sono</h2>
+      <p>Studio informatica e mi piace creare cose nuove al computer.</p>
+    </section>
 
-    .sotto {
-      color: #475569;
-      font-size: 1.15rem;
-      font-style: italic;
-      font-weight: 500;
-    }
+    <!-- COMPETENZE -->
+    <section>
+      <h2>Le mie competenze</h2>
+      <div class="skill-box">
+        <label for="html-bar">HTML e Pagine Web (85%)</label>
+        <progress id="html-bar" value="85" max="100"></progress>
+      </div>
+      <div class="skill-box">
+        <label for="info-bar">Informatica e Computer (90%)</label>
+        <progress id="info-bar" value="90" max="100"></progress>
+      </div>
+    </section>
 
-    /* CONTENITORE PRINCIPALE (SCHEDA) */
-    .scheda {
-      background-color: #ffffff;
-      max-width: 650px;
-      margin: 0 auto;
-      padding: 35px 30px;
-      border-radius: 20px;
-      box-shadow: 0 15px 35px rgba(30, 58, 138, 0.12);
-      border: 1px solid #cbd5e1;
-    }
+    <!-- PASSIONI -->
+    <section>
+      <h2>Le mie passioni</h2>
+      <ul>
+        <li>Calcio</li>
+        <li>Basket</li>
+        <li>Musica</li>
+      </ul>
 
-    /* TITOLI DI SEZIONE COLORATI */
-    h2 {
-      color: #2563eb; /* BLU BRILLANTE */
-      font-size: 1.35rem;
-      margin-top: 28px;
-      margin-bottom: 12px;
-      padding-bottom: 6px;
-      border-bottom: 3px solid #dbeafe;
-    }
+      <details>
+        <summary>Scopri di più sulle mie passioni</summary>
+        <p>Nel tempo libero mi piace giocare a calcio, ascoltare musica e seguire le partite di basket con gli amici!</p>
+      </details>
+    </section>
 
-    .scheda section:first-of-type h2 {
-      margin-top: 0;
-    }
+    <!-- TABELLA MATERIE -->
+    <section>
+      <h2>Le mie materie preferite</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Materia</th>
+            <th>Cosa facciamo</th>
+            <th>Preferenza</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Informatica</td>
+            <td>Siti web e programmazione</td>
+            <td>5 / 5</td>
+          </tr>
+          <tr>
+            <td>Educazione Fisica</td>
+            <td>Sport e giochi di squadra</td>
+            <td>5 / 5</td>
+          </tr>
+          <tr>
+            <td>Matematica</td>
+            <td>Calcoli e logica</td>
+            <td>4 / 5</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-    p {
-      color: #334155;
-      margin-bottom: 12px;
-      font-size: 1rem;
-    }
+    <!-- IL MIO SOGNO -->
+    <section>
+      <h2>Il mio sogno</h2>
+      <p>Lavorare con i computer e diventare uno sviluppatore software.</p>
+    </section>
 
-    /* LISTE COLORATE */
-    ul, ol {
-      margin-left: 22px;
-      color: #334155;
-      margin-bottom: 15px;
-    }
+    <!-- MODULO DI CONTATTO -->
+    <section>
+      <h2>Lasciami un messaggio</h2>
+      <form onsubmit="alert('Messaggio inviato con successo!'); return false;">
+        <label for="nome"><b>Il tuo nome:</b></label>
+        <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
 
-    li {
-      margin-bottom: 6px;
-    }
+        <label for="messaggio"><b>Messaggio:</b></label>
+        <textarea id="messaggio" name="messaggio" rows="3" placeholder="Scrivi un messaggio..." required></textarea>
 
-    /* BARRE DI PROGRESSO COLORATE */
-    .skill-box {
-      margin-bottom: 12px;
-    }
+        <div class="btn-container">
+          <button type="submit">Invia messaggio</button>
+          <button type="reset" class="btn-alt">Cancella</button>
+        </div>
+      </form>
+    </section>
 
-    .skill-box label {
-      font-weight: 600;
-      color: #1e293b;
-      display: block;
-      margin-bottom: 4px;
-    }
+    <!-- BOTTONI RAPIDI -->
+    <section>
+      <h2>Azioni rapide</h2>
+      <div class="btn-container">
+        <button onclick="alert('Ciao! Grazie per aver visitato il mio sito!')">Invia un saluto 👋</button>
+        <button class="btn-alt" onclick="alert('Sito realizzato per l\'anno scolastico 2025/2026')">Info sito ℹ️</button>
+      </div>
+    </section>
 
-    progress {
-      width: 100%;
-      height: 12px;
-      border-radius: 10px;
-      overflow: hidden;
-      appearance: none;
-    }
+  </main>
 
-    progress::-webkit-progress-bar {
-      background-color: #e2e8f0;
-      border-radius: 10px;
-    }
+  <!-- PIÈ DI PAGINA -->
+  <footer>
+    <p class="piede">Sito creato da me - 2026</p>
+  </footer>
 
-    progress::-webkit-progress-value {
-      background: linear-gradient(90deg, #3b82f6, #1d4ed8);
-      border-radius: 10px;
-    }
-
-    /* TENDINA ESPANDIBILE COLORATA */
-    details {
-      background-color: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 12px 16px;
-      margin-top: 10px;
-      transition: all 0.2s ease;
-    }
-
-    details[open] {
-      background-color: #eff6ff;
-      border-color: #bfdbfe;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 600;
-      color: #1d4ed8;
-    }
-
-    details p {
-      margin-top: 10px;
-      margin-bottom: 0;
-      color: #1e3a8a;
-    }
-
-    /* TABELLA STILIZZATA E COLORATA */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    }
-
-    th {
-      background-color: #1e40af;
-      color: #ffffff;
-      padding: 12px;
-      text-align: left;
-      font-size: 0.95rem;
-    }
-
-    td {
-      padding: 12px;
-      border-bottom: 1px solid #e2e8f0;
-      background-color: #ffffff;
-      color: #334155;
-    }
-
-    tr:nth-child(even) td {
-      background-color: #
+</body>
+</html>
