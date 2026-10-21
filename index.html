@@ -5,85 +5,205 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Il mio primo sito - Filippo</title>
   <style>
-    /* Stile semplice per principianti */
+    /* Reset e impostazioni di base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f0f4f8;
-      color: #333;
-      margin: 20px;
+      color: #333333;
+      padding: 30px 15px;
+      line-height: 1.6;
+    }
+
+    /* Titolo Principale */
+    header {
+      text-align: center;
+      margin-bottom: 30px;
     }
 
     h1 {
-      color: #1a5276;
-      text-align: center;
+      color: #1e3a8a;
+      font-size: 2.2rem;
+      margin-bottom: 8px;
     }
 
     .sotto {
-      text-align: center;
-      color: #555;
+      color: #64748b;
+      font-size: 1.1rem;
       font-style: italic;
     }
 
+    /* Contenitore/Scheda Principale */
     .scheda {
-      background-color: white;
-      border: 2px solid #3498db;
-      border-radius: 8px;
-      padding: 20px;
-      max-width: 550px;
-      margin: 20px auto;
+      background-color: #ffffff;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e2e8f0;
     }
 
+    /* Titoli delle Sezioni */
     h2 {
-      color: #2980b9;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
+      color: #2563eb;
+      font-size: 1.3rem;
+      margin-top: 25px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #eff6ff;
+      padding-bottom: 6px;
     }
 
-    ul, ol {
-      line-height: 1.8;
+    h2:first-of-type {
+      margin-top: 0;
     }
 
-    img {
-      display: block;
-      margin: 15px auto;
-      max-width: 100%;
-      height: auto;
-      border-radius: 6px;
-      border: 1px solid #ddd;
+    p {
+      color: #475569;
+      margin-bottom: 10px;
     }
 
-    /* Tabella semplice */
+    /* Badge/Bottoni per le Passioni */
+    .passioni-container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .passione-tag {
+      background-color: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .passione-tag:hover {
+      background-color: #2563eb;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Elenco Numerato */
+    ol {
+      margin-left: 20px;
+      color: #475569;
+    }
+
+    ol li {
+      margin-bottom: 6px;
+    }
+
+    /* Tabella Grafica */
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
-    }
-
-    table, th, td {
-      border: 1px solid #bbb;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
     }
 
     th, td {
-      padding: 8px;
+      padding: 12px;
       text-align: left;
     }
 
     th {
-      background-color: #eaf2f8;
+      background-color: #f1f5f9;
+      color: #1e293b;
+      font-weight: 600;
     }
 
+    td {
+      border-top: 1px solid #e2e8f0;
+      color: #475569;
+    }
+
+    tr:hover {
+      background-color: #f8fafc;
+    }
+
+    /* Box Evidenziato per il Sogno */
+    .box-sogno {
+      background-color: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      padding: 15px;
+      border-radius: 6px;
+      margin-top: 10px;
+      color: #15803d;
+      font-weight: 500;
+    }
+
+    /* Gruppo di Bottoni Interattivi */
+    .bottoni-gruppo {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-align: center;
+      padding: 12px 20px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primario {
+      background-color: #2563eb;
+      color: #ffffff;
+    }
+
+    .btn-primario:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px -2px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-secondario {
+      background-color: #f1f5f9;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-secondario:hover {
+      background-color: #e2e8f0;
+      transform: translateY(-2px);
+    }
+
+    /* Piè di pagina */
     .piede {
       text-align: center;
-      margin-top: 30px;
-      font-size: 14px;
-      color: #777;
+      margin-top: 35px;
+      font-size: 0.9rem;
+      color: #94a3b8;
     }
   </style>
 </head>
 <body>
 
-  <h1>Ciao, sono Filippo</h1>
-  <p class="sotto">Questo è il mio primo sito web.</p>
+  <header>
+    <h1>Ciao, sono Filippo</h1>
+    <p class="sotto">Questo è il mio primo sito web.</p>
+  </header>
 
   <div class="scheda">
     <!-- CHI SONO -->
@@ -92,47 +212,57 @@
 
     <!-- LE MIE PASSIONI -->
     <h2>Le mie passioni</h2>
-    <ul>
-      <li>Calcio</li>
-      <li>Basket</li>
-      <li>Musica</li>
-    </ul>
-
-    <!-- FOTO DAL SERVER/CARTELLA -->
-    <img src="img/passione.jpg" alt="Le mie passioni" width="300">
+    <div class="passioni-container">
+      <span class="passione-tag">⚽ Calcio</span>
+      <span class="passione-tag">🏀 Basket</span>
+      <span class="passione-tag">🎵 Musica</span>
+    </div>
 
     <!-- COSE CHE STO IMPARANDO -->
     <h2>Cosa sto imparando</h2>
     <ol>
-      <li>Creare pagine web in HTML</li>
-      <li>Usare il CSS per lo stile</li>
-      <li>Caricare i file su GitHub</li>
+      <li>Creare pagine web con HTML5</li>
+      <li>Abbellire i siti con il CSS</li>
+      <li>Pubblicare progetti su GitHub</li>
     </ol>
 
     <!-- TABELLA MATERIE -->
     <h2>Le mie materie preferite</h2>
     <table>
-      <tr>
-        <th>Materia</th>
-        <th>Cosa facciamo</th>
-      </tr>
-      <tr>
-        <td>Informatica</td>
-        <td>Siti web e programmazione</td>
-      </tr>
-      <tr>
-        <td>Educazione Fisica</td>
-        <td>Sport e giochi di squadra</td>
-      </tr>
+      <thead>
+        <tr>
+          <th>Materia</th>
+          <th>Cosa facciamo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Informatica</td>
+          <td>Siti web e programmazione</td>
+        </tr>
+        <tr>
+          <td>Educazione Fisica</td>
+          <td>Sport e giochi di squadra</td>
+        </tr>
+      </tbody>
     </table>
 
     <!-- IL MIO SOGNO -->
     <h2>Il mio sogno</h2>
-    <p>Lavorare con i computer e diventare uno sviluppatore.</p>
+    <div class="box-sogno">
+      ✨ Lavorare con i computer e diventare uno sviluppatore software.
+    </div>
 
-    <!-- CONTATTI -->
-    <h2>Contatti</h2>
-    <p>Email: filippo@esempio.it</p>
+    <!-- BOTTONI DI AZIONE -->
+    <h2>Azioni</h2>
+    <div class="bottoni-gruppo">
+      <button class="btn btn-primario" onclick="alert('Grazie per aver visitato il mio sito!')">
+        Invia un saluto 👋
+      </button>
+      <a href="mailto:filippo@esempio.it" class="btn btn-secondario">
+        Contattami ✉️
+      </a>
+    </div>
   </div>
 
   <p class="piede">Sito creato da me - 2026</p>
