@@ -3,22 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il mio sito su GitHub</title>
+    <title>Il mio sito web</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
             text-align: center;
-            margin-top: 50px;
-            background-color: #f4f4f9;
-            color: #333;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
         h1 {
-            color: #0366d6;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
-    <h1>Benvenuto sul mio sito!</h1>
-    <p>Il sito è online grazie a GitHub Pages 🎉</p>
+    <div class="container">
+        <h1>Benvenuto sul mio sito!</h1>
+        <p>Funziona perfettamente! 🚀</p>
+    </div>
 </body>
 </html>
