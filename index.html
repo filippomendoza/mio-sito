@@ -1,126 +1,32 @@
-HTML
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Il mio primo sito - Filippo</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Mia Pagina Web</title>
+    <style>
+        /* Un po' di stile CSS di base */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- INTESTAZIONE -->
-  <header>
-    <h1>Ciao, sono Filippo</h1>
-    <p class="sotto">Questo è il mio primo sito web.</p>
-  </header>
+    <h1>Benvenuto nella mia pagina web!</h1>
+    <p>Questo è un paragrafo di esempio.</p>
 
-  <!-- SCHEDA PRINCIPALE -->
-  <main class="scheda">
+    <h2>I miei link</h2>
+    <ul>
+        <li><a href="https://www.google.com" target="_blank">Google</a></li>
+    </ul>
 
-    <!-- CHI SONO -->
-    <section>
-      <h2>Chi sono</h2>
-      <p>Studio informatica e mi piace creare cose nuove al computer.</p>
-    </section>
-
-    <!-- COMPETENZE -->
-    <section>
-      <h2>Le mie competenze</h2>
-      <div class="skill-box">
-        <label for="html-bar">HTML e Pagine Web (85%)</label>
-        <progress id="html-bar" value="85" max="100"></progress>
-      </div>
-      <div class="skill-box">
-        <label for="info-bar">Informatica e Computer (90%)</label>
-        <progress id="info-bar" value="90" max="100"></progress>
-      </div>
-    </section>
-
-    <!-- PASSIONI -->
-    <section>
-      <h2>Le mie passioni</h2>
-      <ul>
-        <li>Calcio</li>
-        <li>Basket</li>
-        <li>Musica</li>
-      </ul>
-
-      <details>
-        <summary>Scopri di più sulle mie passioni</summary>
-        <p>Nel tempo libero mi piace giocare a calcio, ascoltare musica e seguire le partite di basket con gli amici!</p>
-      </details>
-    </section>
-
-    <!-- TABELLA MATERIE -->
-    <section>
-      <h2>Le mie materie preferite</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Materia</th>
-            <th>Cosa facciamo</th>
-            <th>Preferenza</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Informatica</td>
-            <td>Siti web e programmazione</td>
-            <td>5 / 5</td>
-          </tr>
-          <tr>
-            <td>Educazione Fisica</td>
-            <td>Sport e giochi di squadra</td>
-            <td>5 / 5</td>
-          </tr>
-          <tr>
-            <td>Matematica</td>
-            <td>Calcoli e logica</td>
-            <td>4 / 5</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- IL MIO SOGNO -->
-    <section>
-      <h2>Il mio sogno</h2>
-      <p>Lavorare con i computer e diventare uno sviluppatore software.</p>
-    </section>
-
-    <!-- MODULO DI CONTATTO -->
-    <section>
-      <h2>Lasciami un messaggio</h2>
-      <form onsubmit="alert('Messaggio inviato con successo!'); return false;">
-        <label for="nome"><b>Il tuo nome:</b></label>
-        <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
-
-        <label for="messaggio"><b>Messaggio:</b></label>
-        <textarea id="messaggio" name="messaggio" rows="3" placeholder="Scrivi un messaggio..." required></textarea>
-
-        <div class="btn-container">
-          <button type="submit">Invia messaggio</button>
-          <button type="reset" class="btn-alt">Cancella</button>
-        </div>
-      </form>
-    </section>
-
-    <!-- BOTTONI RAPIDI -->
-    <section>
-      <h2>Azioni rapide</h2>
-      <div class="btn-container">
-        <button onclick="alert('Ciao! Grazie per aver visitato il mio sito!')">Invia un saluto 👋</button>
-        <button class="btn-alt" onclick="alert('Sito realizzato per l\'anno scolastico 2025/2026')">Info sito ℹ️</button>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- PIÈ DI PAGINA -->
-  <footer>
-    <p class="piede">Sito creato da me - 2026</p>
-  </footer>
+    <button onclick="alert('Ciao!')">Cliccami</button>
 
 </body>
 </html>
