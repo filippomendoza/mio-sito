@@ -1,108 +1,46 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sito di Filippo</title>
+    <meta charset="utf-8">
+    <title>La mia presentazione</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        body { 
+            background: lightblue; 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 40px 20px;
         }
 
-        body {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: #f8fafc;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+        h1 { 
+            color: darkblue; 
         }
 
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 50px 40px;
-            max-width: 550px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            animation: fadeIn 1s ease-in-out;
+        .scheda { 
+            background: white; 
+            padding: 20px 30px; 
+            border-radius: 10px; 
+            display: inline-block; 
+            text-align: left; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera per renderla più carina */
         }
 
-        .badge {
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            color: white;
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 6px 16px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 2.3rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            background: linear-gradient(to right, #60a5fa, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p {
-            color: #94a3b8;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            color: white;
-            text-decoration: none;
-            padding: 14px 32px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 25px rgba(139, 92, 246, 0.4);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .scheda p {
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <span class="badge">Sito Ufficiale</span>
-        <h1>Benvenuti nel mio sito!</h1>
-        <p>Ciao, sono Filippo! Benvenuti nel mio spazio web personale. Qui troverete i miei progetti e contenuti creativi.</p>
-        <a href="#" class="btn">Esplora il sito</a>
+    <h1>Mi presento</h1>
+
+    <div class="scheda">
+        <p><b>Nome:</b> Filippo</p>
+        <p><b>Cognome:</b> Mendoza</p>
+        <p><b>Città:</b> Milano</p>
+        <p><b>Telefono:</b> +39 320 831 573</p>
+        <p><b>Email:</b> filippo.mendoza@studenti.piamarta.it</p>
+        <p><b>Hobby:</b> Il mio hobby è giocare a calcio, a basket e ascoltare musica perché mi rilassa.</p>
+        <p><b>Una cosa su di me:</b> Mi piace uscire, mi piace stare con gli amici e non mi piace stare in famiglia.</p>
     </div>
 
 </body>
