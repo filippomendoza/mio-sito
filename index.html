@@ -2,30 +2,66 @@
 <html lang="it">
 <head>
     <meta charset="utf-8">
-    <title>La mia presentazione</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>la mia presentazione</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body { 
-            background: lightblue; 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            padding: 40px 20px;
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
 
         h1 { 
-            color: darkblue; 
+            color: #1e3c72; 
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
         }
 
         .scheda { 
-            background: white; 
-            padding: 20px 30px; 
-            border-radius: 10px; 
-            display: inline-block; 
+            background: rgba(255, 255, 255, 0.95); 
+            padding: 30px; 
+            border-radius: 16px; 
+            width: 100%;
+            max-width: 500px;
             text-align: left; 
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera per renderla più carina */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .scheda:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
         }
 
         .scheda p {
-            line-height: 1.5;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #333;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .scheda p:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .scheda b {
+            color: #2a5298;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -34,13 +70,13 @@
     <h1>Mi presento</h1>
 
     <div class="scheda">
-        <p><b>Nome:</b> Filippo</p>
-        <p><b>Cognome:</b> Mendoza</p>
-        <p><b>Città:</b> Milano</p>
-        <p><b>Telefono:</b> +39 320 831 573</p>
+        <p><b>Nome:</b> filippo</p>
+        <p><b>Cognome:</b> mendoza</p>
+        <p><b>Citta:</b> Milano</p>
+        <p><b>Telefono:</b> 39+320831573</p>
         <p><b>Email:</b> filippo.mendoza@studenti.piamarta.it</p>
-        <p><b>Hobby:</b> Il mio hobby è giocare a calcio, a basket e ascoltare musica perché mi rilassa.</p>
-        <p><b>Una cosa su di me:</b> Mi piace uscire, mi piace stare con gli amici e non mi piace stare in famiglia.</p>
+        <p><b>Hobby:</b> il mio obby e giocare a calcio e basket e ascoltare musica perche mi rilassa</p>
+        <p><b>Una cosa su di me:</b> mi piace usiere mi piace stare in gli amici enon mi piace stare in famiglia</p>
     </div>
 
 </body>
